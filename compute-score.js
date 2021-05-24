@@ -1,9 +1,5 @@
+import { $_value } from './script.js';
 const $ = document.querySelector.bind(document);
-
-function $_value(value){
-    let valueDocument = $(value);
-    return parseFloat(valueDocument.value.replace(',','.'));
-}
 
 function tinhDiemTotNghiep(typeEdu,...scores) {
     let [mathScore,literatureScore,englishScore,combinedScore,...rest] = scores;
@@ -27,7 +23,7 @@ function tinhDiemTotNghiep(typeEdu,...scores) {
          } else { 
              results = 'Bạn sẽ rớt tốt nghiệp! Cẩn thận. Điểm TN:'
          }
-         return isNaN(finalScore) ? 'Not' : `${results} ${finalScore.toFixed(2)}`;
+         return isNaN(finalScore) ? 'Có gì đó sai sai rồi nha.' : `${results} ${finalScore.toFixed(2)}`;
      }
  }
 

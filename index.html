@@ -28,6 +28,30 @@
     <script defer src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
 </head>
 <body class="transition">
+   <!-- <nav class="navbar navbar-left transition" role="navigation">
+       <div class="navbar-heading">
+            <a href="#" class="navbar-logo"><img src="./assets/img/logo.png"/>TDTN</a>
+           <label class="dark-mode">
+               <input type="checkbox" name="checkbox" class="checkbox">
+               <span class="toggle-thumb">
+                <i class='bx bxs-moon' ></i>
+                <i class='bx bx-sun'></i>
+               </span>
+           </label>
+       </div>
+       <div class="navbar-menu">
+           <a href="#" class="navbar-link"><i class='bx bx-home' ></i>Homepage</a>
+           <a href="#" class="navbar-link"><i class='bx bx-info-circle' ></i>About</a>
+           <a href="#" class="navbar-link btn-sign-in"><i class='bx bxl-google' ></i>Đăng nhập bằng Google</a>
+           <a href="#" class="navbar-link btn-sign-out" hidden><i class='bx bx-log-out' ></i>Đăng xuất</a>
+       </div>
+       <div class="navbar-footer">
+           &copy; phanquocbao
+       </div>
+   </nav>
+   <span class="navbar-icon">
+    <i class='bx bx-menu-alt-left'></i>
+   </span> -->
     <div class="container">
         <div class="box__score transition">
             <div class="heading__score">
@@ -49,38 +73,47 @@
                             <option value="2">GDTX</option>
                         </select>
                     </li>
-                    <ul class="list_grid">
+                    <ul class="list_grid" id="form">
                         <li class="input__score">
                             <span class="name_score">Điểm Toán<i class='bx bx-health'></i></span>
-                            <input type="text" placeholder="Nhập điểm của bạn" id="math">
+                            <input type="text" placeholder="Nhập điểm của bạn" id="math" name="math-score">
+                            <span class="form-message"></span>
                         </li>
                         <li class="input__score">
                             <span class="name_score">Điểm Văn<i class='bx bx-health'></i></span>
                             <input type="text" placeholder="Nhập điểm của bạn" id="literature">
+                            <span class="form-message"></span>
                         </li>
                         <li class="input__score" style="display:none;">
                             <span class="name_score">Môn thi tự do<i class='bx bx-health'></i></span>
                             <input type="text" placeholder="Nhập điểm của bạn" id="free-subject">
+                             <span class="form-message"></span>
                         </li>
                         <li class="input__score">
                             <span class="name_score">Điểm Ngoại Ngữ<i class='bx bx-health'></i></span>
                             <input type="text" placeholder="Nhập điểm của bạn" id="english">
+                             <span class="form-message"></span>
                         </li>
-                        <li class="input__score">
-                            <span class="name_score">Trung bình tổ hợp KHTN - <a class="demo_score" href="#">Tính thử</a></span>
+                        <li class="input__score transition">
+                            <span class="name_score">Trung bình tổ hợp KHTN - <a class="demo_score" href="#" onclick="alert('Comming soon...')">Tính thử</a></span>
                             <input type="text" placeholder="Nhập điểm của bạn" id="combine_tn">
                             <div class="combine_score"></div>
-                        
+                            <span class="form-message"></span>
+                            <div class="demo_calc popup">
+                                <p>comming soon</p>
+                            </div>
                         </li>
-                        <li class="input__score">
-                            <span class="name_score">Trung bình tổ hợp KHXH - <a class="demo_score" href="#">Tính thử</a></span>
-                            <input type="text" placeholder="Nhập điểm của bạn" id="combine_xh">
+                        <li class="input__score transition">
+                            <span class="name_score">Trung bình tổ hợp KHXH - <a class="demo_score" href="#" onclick="alert('Comming soon...')">Tính thử</a></span>
+                            <input type="text" placeholder="Nhập điểm của bạn" id="combine_xh"> 
                             <div class="combine_score"></div>
+                            <span class="form-message"></span>
                         
                         </li>
                         <li class="input__score">
                             <span class="name_score">Điểm TB lớp 12<i class='bx bx-health'></i></span>
                             <input type="text" placeholder="Nhập điểm của bạn" id="average_year">
+                             <span class="form-message"></span>
                         </li>
                         <li class="input__score inline">
                             <span class="name_score align-center">Điểm khuyến khích</span>
@@ -119,7 +152,7 @@
                 <div class="copyright"><a target="_blank" href="https://www.facebook.com/phanquocbao.barox/">@phanquocbao.barox</a></div>
             </div>
         </div>
-        <div class="results-box">
+        <div class="results-box popup">
             <i id="close" class='bx bx-x bx-md bx-tada-hover'></i>
             <span id="results"></span>
         </div>

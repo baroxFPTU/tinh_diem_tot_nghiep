@@ -8,5 +8,15 @@
 *.sass.map
 *.scss.map
 
+node_modules
+js/
+css/
+coding/
+
+webpack.dev.js
+webpack.prod.js
+webpack.common.js
+package.json
+package-lock.json
 # End of https://www.toptal.com/developers/gitignore/api/sass
 
